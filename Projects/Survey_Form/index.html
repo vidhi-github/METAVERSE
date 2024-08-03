@@ -17,38 +17,38 @@
     <form id="form" class="needs-validation" novalidate onsubmit="handleSubmit(event)">
 
         <!-- Details -->
-        <div class="form-control">
-			<label for="name" id="label-name">Name</label>
-			<input type="text" id="name" name="name" placeholder="Enter your name" autocomplete="name" required/>
+        <div>
+			<label for="name" id="label-name" class="form-label">Name</label>
+			<input type="text" id="name" name="name" class="form-control" placeholder="Enter your name" autocomplete="name" required/>
 			<div class="valid-feedback">Nice name!</div>
 			<div class="invalid-feedback">Please provide your name.</div>
 		</div>
 
-        <div class="form-control">
-            <label for="institute" id="label-institute">
+        <div>
+            <label for="institute" id="label-institute" class="form-label">
                 Present Institute
             </label>
-            <input type="text" id="institute" placeholder="Enter your Present Institute Name" autocomplete="organization" required/>
+            <input type="text" id="institute" class="form-control" placeholder="Enter your Present Institute Name" autocomplete="organization" required/>
             <div class="invalid-feedback">
                 Please provide your complete institute name. Write N/A, if course is finished.
             </div>
         </div>
 
-        <div class="form-control">
-            <label for="course" id="label-course">
+        <div>
+            <label for="course" id="label-course" class="form-label">
                 Present Course
             </label>
-            <input type="text" id="course" placeholder="Enter your Course Name" autocomplete="organization-title" required/>
+            <input type="text" id="course" class="form-control" placeholder="Enter your Course Name" autocomplete="organization-title" required/>
             <div class="invalid-feedback">
                 Please provide the course you are currently enrolled in. Write N/A, if course is finished.
             </div>
         </div>
 
-        <div class="form-control">
-            <label for="current-year" id="label-current-year">
+        <div >
+            <label for="current-year" id="label-current-year" class="form-label">
                 Present Year
             </label>
-            <input type="text" id="current-year" placeholder="Enter your Current Year i.e., 1st, 2nd, 3rd, 4th" autocomplete="off" required/>
+            <input type="text" id="current-year" class="form-control" placeholder="Enter your Current Year i.e., 1st, 2nd, 3rd, 4th" autocomplete="off" required/>
             <div class="valid-feedback">
                 Great!
             </div>
@@ -57,37 +57,38 @@
             </div>
         </div>
 
-        <div class="form-control">
-			<label for="phoneNo" id="label-phoneNo">Phone Number</label>
-			<input type="tel" id="phoneNo" name="phoneNo" placeholder="Enter your Phone Number" autocomplete="tel" pattern="\d{10}" required/>
+        <div>
+			<label for="phoneNo" id="label-phoneNo" class="form-label">Phone Number</label>
+			<input type="tel" id="phoneNo" class="form-control" name="phoneNo" placeholder="Enter your Phone Number" autocomplete="tel" pattern="\d{10}" required/>
 			<div class="invalid-feedback">Please provide a valid 10-digit contact number.</div>
 		</div>
 
-        <div class="form-control">
-            <label for="email" id="label-email">
+        <div>
+            <label for="email" id="label-email" class="form-label">
                 Email
             </label>
-            <input type="email" id="email" placeholder="Enter your email" autocomplete="email" required/>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email" autocomplete="email" required/>
             <div class="invalid-feedback">
                 Please provide a valid email.
             </div>
         </div>
 
-        <div class="form-control">
-            <label for="age" id="label-age">
+        <div>
+            <label for="age" id="label-age" class="form-label">
                 Age
             </label>
-            <input type="number" id="age" placeholder="Enter your age" autocomplete="bday" required/>
+            <input type="number" id="age"class="form-control"  placeholder="Enter your age" autocomplete="bday" required/>
             <div class="invalid-feedback">
                 Please provide age in years.
             </div>
         </div>
 
-        <div class="form-control">
-            <label for="role" id="label-role">
+        <div>
+            <label for="role" id="label-role" class="form-label">
                 Which option best describes you?
             </label>
-            <select name="role" id="role" required>
+            <select name="role" id="role" class="form-select" required>
+				<option selected disabled value="">Choose...</option>
                 <option value="student">Student</option>
                 <option value="intern">Intern</option>
                 <option value="professional">Professional</option>
@@ -99,7 +100,7 @@
         </div>
 
         <div class="form-control">
-			<label>Would You Recommend Me As a Mentor to Your Friend?</label>
+			<label class="form-label">Would You Recommend Me As a Mentor to Your Friend?</label>
 			<label for="recommend-1">
 				<input type="radio" id="recommend-1" name="recommend" value="yes" required> Yes
 			</label>
@@ -113,7 +114,7 @@
 		</div>
 
         <div class="form-control">
-            <label>Languages and Frameworks known <small>(Check all that apply)</small></label>
+            <label class="form-label">Languages and Frameworks known <small>(Check all that apply)</small></label>
             <label for="lang-c">
                 <input type="checkbox" id="lang-c" name="languages" value="c"> C
             </label>
@@ -153,7 +154,7 @@
         </div>
 
         <div class="form-control">
-            <label for="comment">
+            <label for="comment" class="form-label">
                 Any comments or suggestions
             </label>
             <textarea name="comment" id="comment" placeholder="Enter your comment here" required></textarea>
