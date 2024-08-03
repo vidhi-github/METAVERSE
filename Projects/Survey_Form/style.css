@@ -99,3 +99,34 @@ button {
   cursor: pointer;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
 }
+
+/* Hide feedback messages by default */
+.valid-feedback,
+.invalid-feedback {
+    display: none;
+}
+
+/* Show valid feedback when form is validated and the input is valid */
+.was-validated .valid-feedback {
+    display: block;
+}
+
+/* Show invalid feedback when form is validated and the input is invalid */
+.was-validated .invalid-feedback {
+    display: block;
+}
+
+/* Styling for valid inputs */
+.was-validated .form-control input:valid,
+.was-validated .form-control select:valid,
+.was-validated .form-control textarea:valid {
+    border-color: #28a745; /* Green border for valid inputs */
+}
+
+/* Styling for invalid inputs */
+.was-validated .form-control input:invalid,
+.was-validated .form-control select:invalid,
+.was-validated .form-control textarea:invalid {
+    border-color: #dc3545; /* Red border for invalid inputs */
+}
+

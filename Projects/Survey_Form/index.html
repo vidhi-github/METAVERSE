@@ -18,14 +18,11 @@
 
         <!-- Details -->
         <div class="form-control">
-            <label for="name" id="label-name">
-                Name
-            </label>
-            <input type="text" id="name" placeholder="Enter your name" autocomplete="name" required/>
-            <div class="valid-feedback">
-                Nice name!
-            </div>
-        </div>
+			<label for="name" id="label-name">Name</label>
+			<input type="text" id="name" name="name" placeholder="Enter your name" autocomplete="name" required/>
+			<div class="valid-feedback">Nice name!</div>
+			<div class="invalid-feedback">Please provide your name.</div>
+		</div>
 
         <div class="form-control">
             <label for="institute" id="label-institute">
@@ -61,14 +58,10 @@
         </div>
 
         <div class="form-control">
-            <label for="phone-no" id="label-phone-no">
-                Phone No
-            </label>
-            <input type="tel" id="phone-no" placeholder="Enter your Phone No" autocomplete="tel" required/>
-            <div class="invalid-feedback">
-                Please provide a valid 10-digit contact no.
-            </div>
-        </div>
+			<label for="phoneNo" id="label-phoneNo">Phone Number</label>
+			<input type="tel" id="phoneNo" name="phoneNo" placeholder="Enter your Phone Number" autocomplete="tel" pattern="\d{10}" required/>
+			<div class="invalid-feedback">Please provide a valid 10-digit contact number.</div>
+		</div>
 
         <div class="form-control">
             <label for="email" id="label-email">
@@ -106,22 +99,18 @@
         </div>
 
         <div class="form-control">
-            <label>
-                Would You Recommend Me As a Mentor to Your Friend?
-            </label>
-            <label for="recommend-yes">
-                <input type="radio" id="recommend-yes" name="recommend" value="yes" required> Yes
-            </label>
-            <label for="recommend-no">
-                <input type="radio" id="recommend-no" name="recommend" value="no" required> No
-            </label>
-            <label for="recommend-maybe">
-                <input type="radio" id="recommend-maybe" name="recommend" value="maybe" required> Maybe
-            </label>
-            <div class="invalid-feedback">
-                Required! Tick any one.
-            </div>
-        </div>
+			<label>Would You Recommend Me As a Mentor to Your Friend?</label>
+			<label for="recommend-1">
+				<input type="radio" id="recommend-1" name="recommend" value="yes" required> Yes
+			</label>
+			<label for="recommend-2">
+				<input type="radio" id="recommend-2" name="recommend" value="no" required> No
+			</label>
+			<label for="recommend-3">
+				<input type="radio" id="recommend-3" name="recommend" value="maybe" required> Maybe
+			</label>
+			<div class="invalid-feedback">Required! Tick any one.</div>
+		</div>
 
         <div class="form-control">
             <label>Languages and Frameworks known <small>(Check all that apply)</small></label>
