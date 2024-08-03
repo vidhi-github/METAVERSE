@@ -17,146 +17,120 @@
     <form id="form" class="needs-validation" novalidate onsubmit="handleSubmit(event)">
 
         <!-- Details -->
-        <div>
-			<label for="name" class="form-label">Name</label>
-			<input type="text" id="name" name="name" class="form-control" placeholder="Enter your name" required/>
-			<div class="invalid-feedback">Please provide your name.</div>
-		</div>
-
-        <div>
-            <label for="institute" class="form-label">
-                Present Institute
-            </label>
-            <input type="text" id="institute" class="form-control" placeholder="Enter your Present Institute Name" required/>
-            <div class="invalid-feedback">
-                Please provide your complete institute name. Write N/A, if course is finished.
-            </div>
+        <div class="form-control">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name" required />
+            <div class="invalid-feedback">Please provide your name.</div>
         </div>
 
-        <div>
-            <label for="course" class="form-label">
-                Present Course
-            </label>
-            <input type="text" id="course" class="form-control" placeholder="Enter your Course Name" required/>
-            <div class="invalid-feedback">
-                Please provide the course you are currently enrolled in. Write N/A, if course is finished.
-            </div>
+        <div class="form-control">
+            <label for="institute" class="form-label">Present Institute</label>
+            <input type="text" id="institute" name="institute" class="form-control" placeholder="Enter your Present Institute Name" required />
+            <div class="invalid-feedback">Please provide your complete institute name. Write N/A if the course is finished.</div>
         </div>
 
-        <div >
-            <label for="current-year" class="form-label">
-                Present Year
-            </label>
-            <input type="text" id="current-year" class="form-control" placeholder="Enter your Current Year i.e., 1st, 2nd, 3rd, 4th" required/>
-            <div class="invalid-feedback">
-                Write N/A, if course is finished.
-            </div>
+        <div class="form-control">
+            <label for="course" class="form-label">Present Course</label>
+            <input type="text" id="course" name="course" class="form-control" placeholder="Enter your Course Name" required />
+            <div class="invalid-feedback">Please provide the course you are currently enrolled in. Write N/A if the course is finished.</div>
         </div>
 
-        <div>
-			<label for="phoneNo" class="form-label">Phone Number</label>
-			<input type="tel" id="phoneNo" class="form-control" name="phoneNo" placeholder="Enter your Phone Number" pattern="\d{10}" required/>
-			<div class="invalid-feedback">Please provide a valid 10-digit contact number.</div>
-		</div>
-
-        <div>
-            <label for="email" iclass="form-label">
-                Email
-            </label>
-            <input type="email" class="form-control" id="email" placeholder="Enter your email" required/>
-            <div class="invalid-feedback">
-                Please provide a valid email.
-            </div>
+        <div class="form-control">
+            <label for="current-year" class="form-label">Present Year</label>
+            <input type="text" id="current-year" name="current-year" class="form-control" placeholder="Enter your Current Year i.e., 1st, 2nd, 3rd, 4th" required />
+            <div class="invalid-feedback">Write N/A if the course is finished.</div>
         </div>
 
-        <div>
-            <label for="age" class="form-label">
-                Age
-            </label>
-            <input type="number" id="age"class="form-control"  placeholder="Enter your age" a required/>
-            <div class="invalid-feedback">
-                Please provide age in years.
-            </div>
+        <div class="form-control">
+            <label for="phoneNo" class="form-label">Phone Number</label>
+            <input type="tel" id="phoneNo" name="phoneNo" class="form-control" placeholder="Enter your Phone Number" pattern="\d{10}" required />
+            <div class="invalid-feedback">Please provide a valid 10-digit contact number.</div>
         </div>
 
-        <div>
-            <label for="role" id="label-role" class="form-label">
-                Which option best describes you?
-            </label>
+        <div class="form-control">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email" required />
+            <div class="invalid-feedback">Please provide a valid email.</div>
+        </div>
+
+        <div class="form-control">
+            <label for="age" class="form-label">Age</label>
+            <input type="number" id="age" name="age" class="form-control" placeholder="Enter your age" required />
+            <div class="invalid-feedback">Please provide your age in years.</div>
+        </div>
+
+        <div class="form-control">
+            <label for="role" class="form-label">Which option best describes you?</label>
             <select name="role" id="role" class="form-select" required>
-				<option selected disabled value="">Choose...</option>
+                <option value="" disabled selected>Choose...</option>
                 <option value="student">Student</option>
                 <option value="intern">Intern</option>
                 <option value="professional">Professional</option>
                 <option value="other">Other</option>
             </select>
-            <div class="invalid-feedback">
-                Required!
-            </div>
+            <div class="invalid-feedback">Required!</div>
         </div>
 
         <div class="form-control">
-			<label class="form-label">Would You Recommend Me As a Mentor to Your Friend?</label>
-			<label for="recommend-1">
-				<input type="radio" id="recommend-1" name="recommend" value="yes" required> Yes
-			</label>
-			<label for="recommend-2">
-				<input type="radio" id="recommend-2" name="recommend" value="no" required> No
-			</label>
-			<label for="recommend-3">
-				<input type="radio" id="recommend-3" name="recommend" value="maybe" required> Maybe
-			</label>
-			<div class="invalid-feedback">Required! Tick any one.</div>
-		</div>
+            <label class="form-label">Would You Recommend Me As a Mentor to Your Friend?</label>
+            <div>
+                <label for="recommend-1">
+                    <input type="radio" id="recommend-1" name="recommend" value="yes" required /> Yes
+                </label>
+                <label for="recommend-2">
+                    <input type="radio" id="recommend-2" name="recommend" value="no" required /> No
+                </label>
+                <label for="recommend-3">
+                    <input type="radio" id="recommend-3" name="recommend" value="maybe" required /> Maybe
+                </label>
+            </div>
+            <div class="invalid-feedback">Required! Tick any one.</div>
+        </div>
 
         <div class="form-control">
             <label class="form-label">Languages and Frameworks known <small>(Check all that apply)</small></label>
-            <label for="lang-c">
-                <input type="checkbox" id="lang-c" name="languages" value="c"> C
-            </label>
-            <label for="lang-cpp">
-                <input type="checkbox" id="lang-cpp" name="languages" value="cpp"> C++
-            </label>
-            <label for="lang-csharp">
-                <input type="checkbox" id="lang-csharp" name="languages" value="csharp"> C#
-            </label>
-            <label for="lang-java">
-                <input type="checkbox" id="lang-java" name="languages" value="java"> Java
-            </label>
-            <label for="lang-python">
-                <input type="checkbox" id="lang-python" name="languages" value="python"> Python
-            </label>
-            <label for="lang-js">
-                <input type="checkbox" id="lang-js" name="languages" value="javascript"> JavaScript
-            </label>
-            <label for="lang-react">
-                <input type="checkbox" id="lang-react" name="languages" value="react"> React
-            </label>
-            <label for="lang-angular">
-                <input type="checkbox" id="lang-angular" name="languages" value="angular"> Angular
-            </label>
-            <label for="lang-django">
-                <input type="checkbox" id="lang-django" name="languages" value="django"> Django
-            </label>
-            <label for="lang-spring">
-                <input type="checkbox" id="lang-spring" name="languages" value="spring"> Spring
-            </label>
-            <label for="lang-htmlcss">
-                <input type="checkbox" id="lang-htmlcss" name="languages" value="htmlcss"> HTML & CSS
-            </label>
-            <div class="invalid-feedback">
-                Required!
+            <div>
+                <label for="lang-c">
+                    <input type="checkbox" id="lang-c" name="languages" value="c" /> C
+                </label>
+                <label for="lang-cpp">
+                    <input type="checkbox" id="lang-cpp" name="languages" value="cpp" /> C++
+                </label>
+                <label for="lang-csharp">
+                    <input type="checkbox" id="lang-csharp" name="languages" value="csharp" /> C#
+                </label>
+                <label for="lang-java">
+                    <input type="checkbox" id="lang-java" name="languages" value="java" /> Java
+                </label>
+                <label for="lang-python">
+                    <input type="checkbox" id="lang-python" name="languages" value="python" /> Python
+                </label>
+                <label for="lang-js">
+                    <input type="checkbox" id="lang-js" name="languages" value="javascript" /> JavaScript
+                </label>
+                <label for="lang-react">
+                    <input type="checkbox" id="lang-react" name="languages" value="react" /> React
+                </label>
+                <label for="lang-angular">
+                    <input type="checkbox" id="lang-angular" name="languages" value="angular" /> Angular
+                </label>
+                <label for="lang-django">
+                    <input type="checkbox" id="lang-django" name="languages" value="django" /> Django
+                </label>
+                <label for="lang-spring">
+                    <input type="checkbox" id="lang-spring" name="languages" value="spring" /> Spring
+                </label>
+                <label for="lang-htmlcss">
+                    <input type="checkbox" id="lang-htmlcss" name="languages" value="htmlcss" /> HTML & CSS
+                </label>
             </div>
+            <div class="invalid-feedback">Required!</div>
         </div>
 
         <div class="form-control">
-            <label for="comment" class="form-label">
-                Any comments or suggestions
-            </label>
-            <textarea name="comment" id="comment" placeholder="Enter your comment here" required></textarea>
-            <div class="invalid-feedback">
-                Please mention your thoughts!!
-            </div>
+            <label for="comment" class="form-label">Any comments or suggestions</label>
+            <textarea name="comment" id="comment" class="form-control" placeholder="Enter your comment here" required></textarea>
+            <div class="invalid-feedback">Please mention your thoughts!</div>
         </div>
 
         <div>
@@ -168,6 +142,7 @@
                 <button type="button" onclick="closePopUp()">OK</button>
             </div>
         </div>
+        
         <script src="script.js"></script>
     </form>
 </body>
