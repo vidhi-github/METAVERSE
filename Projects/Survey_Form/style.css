@@ -1,7 +1,19 @@
+/* style.css */
 body {
   background-color: #c5840b;
-  font-family: Verdana;
+  font-family: 'Poppins', sans-serif;
   text-align: center;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  color: #fff;
+  margin-bottom: 20px;
 }
 
 form {
@@ -9,6 +21,7 @@ form {
   max-width: 500px;
   margin: 50px auto;
   padding: 30px 20px;
+  border-radius: 8px;
   box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -20,36 +33,44 @@ form {
 .form-control label {
   display: block;
   margin-bottom: 10px;
+  font-weight: 500;
+  color: #333;
 }
 
 .form-control input,
 .form-control select,
 .form-control textarea {
   border: 1px solid #777;
-  border-radius: 2px;
-  font-family: inherit;
+  border-radius: 4px;
   padding: 10px;
-  display: block;
-  width: 95%;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: inherit;
 }
 
 .form-control input[type="radio"],
 .form-control input[type="checkbox"] {
   display: inline-block;
   width: auto;
+  margin-right: 10px;
 }
 
 button {
   background-color: #25c405;
-  border: 1px solid #777;
-  border-radius: 2px;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
   font-family: inherit;
   font-size: 21px;
-  display: block;
-  width: 100%;
+  padding: 10px;
   cursor: pointer;
-  margin-top: 50px;
-  margin-bottom: 20px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #218a04;
 }
 
 .pop-up {
@@ -61,10 +82,11 @@ button {
   left: 50%;
   transform: translate(-50%, -50%) scale(0.1);
   text-align: center;
-  padding: 0 30px 30px;
+  padding: 30px;
   color: #333;
   visibility: hidden;
   transition: transform 0.4s, top 0.4s;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .open-pop {
@@ -103,30 +125,29 @@ button {
 /* Hide feedback messages by default */
 .valid-feedback,
 .invalid-feedback {
-    display: none;
+  display: none;
 }
 
 /* Show valid feedback when form is validated and the input is valid */
 .was-validated .valid-feedback {
-    display: block;
+  display: block;
 }
 
 /* Show invalid feedback when form is validated and the input is invalid */
 .was-validated .invalid-feedback {
-    display: block;
+  display: block;
 }
 
 /* Styling for valid inputs */
 .was-validated .form-control input:valid,
 .was-validated .form-control select:valid,
 .was-validated .form-control textarea:valid {
-    border-color: #28a745; /* Green border for valid inputs */
+  border-color: #28a745; /* Green border for valid inputs */
 }
 
 /* Styling for invalid inputs */
 .was-validated .form-control input:invalid,
 .was-validated .form-control select:invalid,
 .was-validated .form-control textarea:invalid {
-    border-color: #dc3545; /* Red border for invalid inputs */
+  border-color: #dc3545; /* Red border for invalid inputs */
 }
-
